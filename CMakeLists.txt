@@ -55,9 +55,9 @@ else()
 
   IF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.5)
     MESSAGE ("It is greater than 3.5. Adding custom warnings.")
+    set(WARNINGS "${WARNINGS} -Wno-error=terminate -Wno-error=misleading-indentation -Wno-error=logical-op")
   ELSE (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.5)
     MESSAGE ("It is not greater than 3.5. Nothing to do.")
-    set(WARNINGS "${WARNINGS} -Wno-error=terminate -Wno-error=misleading-indentation -Wno-error=logical-op")
   ENDIF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.5)
 
   if(CMAKE_C_COMPILER_ID STREQUAL "Clang")
