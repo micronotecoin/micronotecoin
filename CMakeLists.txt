@@ -54,10 +54,10 @@ else()
   set(WARNINGS "-Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Werror -Wno-error=extra -Wno-error=unused-function -Wno-error=deprecated-declarations -Wno-error=sign-compare -Wno-error=strict-aliasing -Wno-error=type-limits -Wno-unused-parameter -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wno-error=unused-result")
 
   IF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.5)
-    MESSAGE ("It is greater than 3.5. Adding custom warnings.")
+    MESSAGE ("-- CMAKE VERSION > 3.5. Adding custom warnings.")
     set(WARNINGS "${WARNINGS} -Wno-error=terminate -Wno-error=misleading-indentation -Wno-error=logical-op")
   ELSE (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.5)
-    MESSAGE ("It is not greater than 3.5. Nothing to do.")
+    MESSAGE ("-- CMAKE VERSION <= 3.5. Nothing to do.")
   ENDIF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.5)
 
   if(CMAKE_C_COMPILER_ID STREQUAL "Clang")
