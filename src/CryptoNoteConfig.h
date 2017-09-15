@@ -95,8 +95,8 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const std::initializer_list<const char*> SEED_NODES = {
-  "seed.unotecoin.com:3939",
-  "node.unotecoin.com:3939"
+  "seed1.unotecoin.com:3939",
+  "seed2.unotecoin.com:3939"
 };
 
 struct CheckpointData {
